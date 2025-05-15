@@ -4,7 +4,8 @@
 	box-sizing: border-box;
 }
 
-/*cabeçalho*/
+/*------------------------------------------------------------------header--------------------------------------------------------------------------*/
+
 header {
 	display: flex;
 	justify-content: space-between;
@@ -13,8 +14,10 @@ header {
 	margin: 20px 0;
 }
 
+
 header img {
-	width: 70%;
+	width: 100%;
+	max-width: 150px;
 }
 
 nav a {
@@ -26,7 +29,11 @@ nav a {
 
 nav {
 	width: 40%;
-	
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 10px;
 }
 
 .logo {
@@ -34,7 +41,15 @@ nav {
 }
 
 
-/*corpo do texto home*/
+/*------------------------------------------------------------corpo do texto home---------------------------------------------------------------*/
+
+html,
+body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
 
 body {
 	text-align: center;
@@ -43,7 +58,7 @@ body {
 
 main {
 	text-align: center;
-	
+	flex: 1;
 }
 
 main img {
@@ -51,80 +66,88 @@ main img {
 	height: auto;
 }
 
-/*corpo lancamento*/
-.video{
-	display: flex;
-    justify-content: center;
-    background-color: black;
-    padding: 1px 0;
-    margin: 10px;
-}
-.anuncio {
-    display: flex;
-    justify-content: center;
-    margin: 3 100px;
+/*-----------------------------------------------------------corpo lancamento-----------------------------------------------------------------------*/
 
-}
-.anuncio img {
-    width: 80%;
-    max-width: 250px;
-    border-radius: 8px;
+.video {
+	display: flex;
+	justify-content: center;
+	background-color: black;
+	padding: 1px 0;
 	margin: 10px;
 }
 
-
-.imginicial{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:  center;
-	
+.anuncio {
+	display: flex;
+	justify-content: center;
+	margin: 3 100px;
 }
 
-.carros input{
-    width: 40px;
-    height: 23px;
- 
+.anuncio img {
+	width: 80%;
+	max-width: 250px;
+	border-radius: 8px;
+	margin: 10px;
+}
+
+.imginicial {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+}
+
+.centro{
+	margin: 5px auto;
+	justify-content: center;
+}
+.carros input {
+	width: 40px;
+	height: 23px;
 }
 
 .carros img {
-    width: 10px;
-    height: 25px;
-}
-.carros p{
-    color: #0b38a1;
-    font-size: 14px;
-}
-.carros{
-    display: flex;
-    justify-content:space-evenly;
-	align-items: center;
-}
-.carros img{
-    width: 30px;
-    margin: 20px;
+	width: 10px;
+	height: 25px;
+
 }
 
-.button{
-    display: flex;
-    justify-content: center;
+.carros p {
+	color: #0b38a1;
+	font-size: 14px;
+}
+
+.carros {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+
+}
+
+.carros img {
+	width: 30px;
+	margin: 20px;
+}
+
+.button {
+	display: flex;
+	justify-content: center;
 	align-items: center;
 }
+
 .button2 {
-    margin: 40px;
-    padding: 12px 30px;
-    background-color: #0b3fa5;
-    color: #fff;
-    border-radius: 10px;
-    font-size: 16px;
-    border: none;
+	margin: 40px;
+	padding: 12px 30px;
+	background-color: #0b3fa5;
+	color: #fff;
+	border-radius: 10px;
+	font-size: 16px;
+	border: none;
 }
 
 .button2:hover {
-    background-color: #477bf5;
+	background-color: #477bf5;
 }
-
-/* footer*/
 
 .botao {
 	background-color: #1b357e;
@@ -140,14 +163,16 @@ main img {
 	background-color: #A9A9A9;
 }
 
-/*corpo do contato*/
+/*----------------------------------------------------corpo do contato-------------------------------------------------------------------*/
 
 
-#formulario{
+#formulario {
 	display: flex;
 	justify-content: center;
 	margin: 90px 40px;
+	height: 100%;
 }
+
 .form {
 	max-width: 350px;
 	width: 100%;
@@ -155,19 +180,43 @@ main img {
 	flex-direction: column;
 	gap: 15px;
 	flex-wrap: wrap;
-  }
-  
-  .form h2 {
+
+}
+
+.centralizar{
+	margin: 5px ;
+	justify-content: center;
+	display: flex;
+}
+
+.form h2 {
 	margin: 10px 25px;
-  }
-  
-  .form input, .form select {
+	
+}
+
+.form input,
+.form select {
 	padding: 10px;
 	border: 1px solid #ccc;
 	border-radius: 10px;
-  }
-  
-  .form button {
+	justify-content: space-around;
+	border-radius: 7px;
+	text-align: left;
+
+	
+}
+
+textarea {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	justify-content: space-around;
+	border-radius: 7px;
+	height: 40px;
+
+	
+}
+.form button {
 	padding: 10px;
 	background-color: #004aad;
 	color: white;
@@ -177,16 +226,14 @@ main img {
 	cursor: pointer;
 	width: 50%;
 	align-self: flex-end !important
+}
 
-  }
-  
-  .form button:hover {
+.form button:hover {
 	background-color: #00307a;
-  }
+}
 
 
-
-/*rodapé*/
+/*----------------------------------------------------------------footer--------------------------------------------------------------------*/
 
 .redes-sociais img {
 	width: 40px;
@@ -203,6 +250,10 @@ footer {
 	justify-content: space-between;
 	align-items: center;
 	position: fixed;
+	position: static;
+	flex-wrap: wrap;
+	gap: 10px;
+	text-align: center;
 }
 
 footer div {
@@ -216,4 +267,61 @@ footer div {
 	margin-right: 15px;
 }
 
+/*--------------------------------------------------------------responvidade------------------------------------------------------------------*/
 
+@media (max-width: 768px) {
+
+
+	header {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	nav {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	#formulario {
+		flex-direction: column;
+		margin: 20px;
+	}
+
+	.form {
+		width: 100%;
+	}
+
+	.anuncio table,
+	.anuncio tr,
+	.anuncio td {
+		display: block;
+		width: 100%;
+	}
+
+	.carros {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.carros p {
+		font-size: 16px;
+	}
+
+
+	.button {
+		flex-direction: column;
+	}
+
+	.button2 {
+		width: 80%;
+	}
+
+
+	footer {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+	}
+}

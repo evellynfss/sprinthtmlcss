@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="Página inicial do desafio HTML e CSS">
     <meta name="keywords" content="HTML, CSS, Ford, Web Design, Cimatec">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/index.css">
@@ -27,27 +28,34 @@
     </header>
 
     <main id="formulario">
-        <div class="container">
-            <img src="../img/xls 2.2 diesel.jpg" alt="Caminhonete Ford" class="carro">
+        <div class="carro">
+            <img src="../img/xls 2.2 diesel.jpg" alt="Caminhonete Ford">
         </div>
 
+        <div class="centralizar">
+            <form action="" class="form">
+                <h2>Sobre Você</h2>
+                <input type="text" placeholder="Nome*" required />
+                <input type="email" placeholder="E-mail*" required />
+                <input type="text" placeholder="CPF*" required />
+                <input type="text" placeholder="Sobrenome*" required />
+                <input type="tel" placeholder="Telefone*" required />
 
-        <form action="" class="form">
-            <h2>Sobre Você</h2>
-            <input type="text" placeholder="Nome*" required />
-            <input type="email" placeholder="E-mail*" required />
-            <input type="text" placeholder="CPF*" required />
-            <input type="text" placeholder="Sobrenome*" required />
-            <input type="tel" placeholder="Telefone*" required />
 
-            <select required>
-                <option value="">Como deseja ser contatado</option>
-                <option value="email">E-mail</option>
-                <option value="telefone">Telefone</option>
-                <option value="whatsapp">WhatsApp</option>
-            </select>
-            <button type="submit" style="float: right;">Enviar</button>
-        </form>
+                <select required>
+                    <option value="">Tipo de Contato</option>
+                    <option value="Elogio">Elogio</option>
+                    <option value="Reclamação">Reclamação</option>
+                    <option value="Solicitação">Sugestão</option>
+                </select>
+
+                <div class="mens">
+                    <p><strong>Mensagem</strong></p>
+                    <textarea name="" id="" cols="30" rows="10" placeholder=""></textarea>
+                </div>
+                <button type="submit" style="float: right;">Enviar</button>
+            </form>
+        </div>
     </main>
 
     <footer>
